@@ -28,5 +28,12 @@ namespace MyNotepad32
             openFileDialog1.ShowDialog(this);
             textBox1.Text = File.ReadAllText(openFileDialog1.FileName);
         }
+
+        private void 저장ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.ShowDialog(this);
+            File.WriteAllText(saveFileDialog1.FileName, textBox1.Text);
+
+        }
     }
 }
