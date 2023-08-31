@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,12 @@ namespace MyNotepad32
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void 열기ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog(this);
+            textBox1.Text = File.ReadAllText(openFileDialog1.FileName);
         }
     }
 }
