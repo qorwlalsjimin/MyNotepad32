@@ -35,5 +35,15 @@ namespace MyNotepad32
             File.WriteAllText(saveFileDialog1.FileName, textBox1.Text);
 
         }
+
+        private void 끝내기ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void 메모장정보ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("제작자: 백지민", "메모장 정보", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
